@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# konkur-front
 
-## Getting Started
+اپ موبایل Study Tracker / کنکور ترکر (Next.js + Tailwind).
 
-First, run the development server:
+## اجرا
 
 ```bash
+cd ~/Desktop/konkur-front
+npm install
+cp .env.local.example .env.local   # یا از .env.local موجود استفاده کنید
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+آدرس پیش‌فرض: http://127.0.0.1:3000 (در حال اجرا می‌تواند پورت دیگری مثل `3002` باشد).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+بک‌اند باید روی `NEXT_PUBLIC_API_URL` در دسترس باشد (پیش‌فرض `http://127.0.0.1:8000/api/v1`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### حساب دمو
 
-## Learn More
+- کاربر: `demo_student`
+- رمز: `demo-pass-123`
 
-To learn more about Next.js, take a look at the following resources:
+(پس از `python manage.py seed_dev` در بک‌اند)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ویژگی‌ها
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- شِل موبایل RTL با فونت Vazirmatn و عرض حداکثر موبایل (`max-w-lg`)
+- Bottom navbar ثابت (`fixed inset-x-0 bottom-0`) در همه صفحات اپ + safe-area
+- ورود / ثبت‌نام JWT
+- خانه، مطالعه (تایمر)، برنامه‌ریز، تحلیل، جامعه، پروفایل
+- داشبورد مشاور و والدین
+- اعلان‌ها
 
-## Deploy on Vercel
+## نقش‌ها
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+از منوی بالای صفحه می‌توانید نقش نمایشی را عوض کنید؛ نَوبار پایین بر اساس نقش تغییر می‌کند.
